@@ -1,0 +1,72 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "UnitType"
+            }
+          ],
+          "name": "converTemIntent",
+          "samples": [
+            "What is {temperature} degrees {unit} in Celsius",
+            "Convert {temperature} degrees {unit} to Celsius",
+            "Convert {temperature} degrees {unit}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "centígrados",
+                  "Celsius"
+                ],
+                "value": "Celsius"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "fahrenheit",
+                  "Fahrenheit"
+                ],
+                "value": "Fahrenheit"
+              }
+            }
+          ],
+          "name": "UnitType"
+        }
+      ],
+      "invocationName": "convert temperature"
+    }
+  }
+}
